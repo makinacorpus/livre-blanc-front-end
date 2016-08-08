@@ -1,2 +1,3 @@
-# livre-blanc-front-end
-Livre Blanc Front-End
+# Livre Blanc Front-End
+
+Page de présentation du Livre Blanc Front-End de Makina Corpus.
