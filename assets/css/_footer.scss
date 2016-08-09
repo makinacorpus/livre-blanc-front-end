@@ -1,7 +1,8 @@
 footer {
   background: $grey;
   color: white;
-  font-size: 0.8em;
+  font-size: 0.75em;
+  line-height: 1.4em;
   padding: 1em 0;
   a {
     text-decoration: none;
@@ -15,12 +16,30 @@ footer {
     padding-bottom: 0;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
   }
-  p {
+
+  .copyright {
     flex: 1;
   }
+
   img {
     width: 100px;
     height: auto;
+  }
+
+  .logo-makina {
+    padding-top: 1em;
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    .wrapper {
+      flex-direction: row;
+    }
+
+    .logo-makina {
+      padding-left: 4em;
+    }
   }
 }
