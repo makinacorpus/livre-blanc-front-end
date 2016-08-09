@@ -33,38 +33,73 @@ body {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  padding: 4em .8em;
+  padding: 2em .8em;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media screen and (min-width: $breakpoint) {
     max-width: $container-width;
+    padding: 4em .8em;
+  }
+}
+
+h1 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+
+  @media screen and (min-width: $breakpoint) {
+    font-size: 1.8em;
+  }
+}
+
+h2 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+
+  @media screen and (min-width: $breakpoint) {
+    font-size: 1.6em;
+    line-height: 1.4em;
   }
 }
 
 h3 {
   font-weight: 500;
-  font-size: 1.8em;
-  line-height: 1.4em;
+  font-size: 1.6em;
+  line-height: 1.2em;
   margin-top: 0;
   max-width: 680px;
+
+  @media screen and (min-width: $breakpoint) {
+    font-size: 1.8em;
+    line-height: 1.4em;
+  }
 }
 
 input[type="text"],input[type="email"] {
   padding: 1.25em;
   border: solid 1px darken($grey-light, 10%);
   margin: .5em 0;
-  height: 75px;
-  &.min {
-    height: 60px;
-    font-size: .8em;
-    padding: .8em 1.25em;
+
+  height: 60px;
+  font-size: .8em;
+  padding: .8em 1.25em;
+
+  @media screen and (min-width: $breakpoint) {
+    height: 75px;
+    font-size: 1em;
+    padding: 1.25em;
+
+    &.min {
+      height: 60px;
+      font-size: .8em;
+      padding: .8em 1.25em;
+    }
+
   }
 }
 
 .button {
-  height: 75px;
   margin: .5em 0;
   background: transparent;
   border: solid 3px $blue-light;
@@ -80,10 +115,20 @@ input[type="text"],input[type="email"] {
     color: $grey-light;
   }
 
-  &.min {
-    height: 60px;
-    font-size: .8em;
-    padding: .8em 1.25em;
+  font-size: .8em;
+  padding: .8em 1.25em;
+
+  @media screen and (min-width: $breakpoint) {
+    height: 75px;
+    font-size: 1em;
+    padding: 1.25em;
+
+    &.min {
+      height: 60px;
+      font-size: .8em;
+      padding: .8em 1.25em;
+    }
+
   }
 }
 
@@ -107,17 +152,16 @@ input[type="text"],input[type="email"] {
     justify-content: space-between;
     width: 100%;
     max-width: 680px;
-    input {
-      flex: 2;
-      margin: .8em;
-      &.button {
-        flex: 1;
-      }
-    }
-
 
     @media screen and (min-width: $breakpoint) {
       flex-direction: row;
+      input {
+        flex: 2;
+        margin: .5em .8em;
+        &.button {
+          flex: 1;
+        }
+      }
     }
   }
 
