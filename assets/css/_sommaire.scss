@@ -1,0 +1,68 @@
+.sommaire {
+  h3 {
+    font-weight: 300;
+  }
+
+  > div > ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+
+
+    > li {
+      font-weight: 600;
+      margin-bottom: 1.75em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+
+      .icon {
+        flex: 0 0 100%;
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      > ul {
+        text-align: left;
+        margin-top: 1em;
+        flex: 0 0 100%;
+        > li {
+          font-weight: 300;
+          list-style-type: disc;
+
+          > ul {
+            padding: 0 0 0 1em;
+            margin: 0;
+            > li {
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: $breakpoint) {
+        justify-content: flex-start;;
+        .icon {
+          text-align: right;
+          flex: none;
+          margin-right: 16px;
+          width: 100px;
+        }
+
+        ul {
+          padding-left: 106px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

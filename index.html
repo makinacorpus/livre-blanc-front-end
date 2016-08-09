@@ -1,0 +1,113 @@
+---
+layout: default
+---
+
+<header>
+  <div class="wrapper">
+    <div class="presentation">
+      <h1>Livre Blanc Front-End</h1>
+      <h2>Tout ce que qu'il faut savoir pour bien débuter un projet Front-End.</h2>
+
+      <form action="">
+        <input type="email" placeholder="Email" />
+        <input type="submit" class="button" value="Télécharger le livre blanc">
+      </form>
+    </div>
+
+    <div class="book">
+      <img src="assets/img/cover-blue.png" alt="">
+    </div>
+  </div>
+</header>
+
+<section class="frameworks">
+  <div class="wrapper">
+    <h3>Découvrez les principaux frameworks et apprenez à faire les bons&nbsp;choix</h3>
+    <p>Ce livre vous explique de manière simple le fonctionnement de chaque framework ainsi que des exemples de projets&nbsp;type.</p>
+    <ul>
+      <li>
+        <a href="https://angularjs.org/" title="Voir le site d'AngularJS" target="_blank">
+          <img src="assets/img/logo-angularjs.png" alt="">
+          <h4>AngularJS 1</h4>
+        </a>
+      </li>
+      <li>
+        <a href="https://angular.io/" title="Voir le site d'AngularJS" target="_blank">
+          <img src="assets/img/logo-angular2.png" alt="">
+          <h4>Angular 2</h4>
+        </a>
+      </li>
+      <li>
+        <a href="http://backbonejs.org/" title="Voir le site de Backbone" target="_blank">
+          <img src="assets/img/logo-backbone.png" alt="">
+          <h4>Backbone</h4>
+        </a>
+      </li>
+      <li>
+        <a href="https://facebook.github.io/react/" title="Voir le site de ReactJS" target="_blank">
+          <img src="assets/img/logo-react.png" alt="">
+          <h4>ReactJS</h4>
+        </a>
+      </li>
+      <li>
+        <a href="https://vuejs.org/" title="Voir le site de VueJS" target="_blank">
+          <img src="assets/img/logo-vuejs.png" alt="">
+          <h4>VueJS</h4>
+        </a>
+      </li>
+      <li>
+        <a href="http://emberjs.com/" title="Voir le site de Ember" target="_blank">
+          <img src="assets/img/logo-ember.png" alt="">
+          <h4>Ember</h4>
+        </a>
+      </li>
+    </ul>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="greyscale">
+         <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0
+                                              0.3333 0.3333 0.3333 0 0
+                                              0.3333 0.3333 0.3333 0 0
+                                              0      0      0      1 0"/>
+        </filter>
+    </svg>
+
+  </div>
+</section>
+
+<section class="pourquoi">
+  <div class="wrapper">
+    <h3>Pourquoi ce livre ?</h3>
+    <p>Ce livre est destiné particulièrement aux personnes devant accompagner une équipe
+      de développeurs et souhaitant mieux comprendre le vocabulaire Front-End et les intérêts de chaques frameworks.</p>
+  </div>
+</section>
+
+<section class="sommaire">
+  <div class="wrapper">
+    <h3>Sommaire</h3>
+    {% capture sommaire %}{% include sommaire.md %}{% endcapture %}
+    {{ sommaire | markdownify }}
+  </div>
+
+</section>
+
+<section class="stay-in-touch">
+  <div class="wrapper">
+    <h4>Vous souhaitez être tenu au courant lors de la publication de nos prochains livres blancs ?</h4>
+    <form action="">
+      <input type="email" class="min" placeholder="Email" />
+      <input type="submit" class="button min" value="M'inscrire sur à la newsletter">
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrapper">
+    <p>
+      CC 2016 by <a href="http://makina-corpus.com/" target="_blank">Makina Corpus</a>
+    </p>
+    <a href="http://makina-corpus.com/" target="_blank">
+      <img src="assets/img/logo_makina.png" alt="Makina Corpus">
+    </a>
+  </div>
+</footer>

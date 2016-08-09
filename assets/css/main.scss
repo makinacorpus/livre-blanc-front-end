@@ -1,0 +1,116 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// GRID
+$container-width: 960px;
+$breakpoint: 780px;
+
+// COLORS
+
+$grey: #404040;
+$grey-light: #f6f6f6;
+
+$green: #d6e61f;
+$red: #d35b3a;
+$blue: #1559af;
+$blue-light: #0096bd;
+
+
+// GENERAL STYLES
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $grey;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 4em .8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $breakpoint) {
+    max-width: $container-width;
+  }
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 1.4em;
+  margin-top: 0;
+  max-width: 680px;
+}
+
+input[type="text"],input[type="email"] {
+  padding: 1.25em;
+  border: solid 1px darken($grey-light, 10%);
+  margin: .5em 0;
+  height: 75px;
+  &.min {
+    height: 60px;
+    font-size: .8em;
+    padding: .8em 1.25em;
+  }
+}
+
+.button {
+  height: 75px;
+  margin: .5em 0;
+  background: transparent;
+  border: solid 3px $blue-light;
+  color: $blue-light;
+  text-transform: uppercase;
+  padding: 1.25em;
+  font-weight: 800;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover, &:focus {
+    background: $blue-light;
+    border-color: $blue-light;
+    color: $grey-light;
+  }
+
+  &.min {
+    height: 60px;
+    font-size: .8em;
+    padding: .8em 1.25em;
+  }
+}
+
+@import 'header';
+@import 'frameworks';
+@import 'poirquoi';
+@import 'sommaire';
+@import 'footer';
+
+.stay-in-touch {
+  background: $grey-light;
+
+  h4 {
+    margin: 0 0 2em 0;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 680px;
+    input {
+      flex: 2;
+      margin: 0 .8em;
+      &.button {
+        flex: 1;
+      }
+    }
+  }
+}

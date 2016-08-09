@@ -1,0 +1,132 @@
+.hexagon {
+  width: 100px;
+  height: 55px;
+  position: relative;
+}
+.hexagon::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+.hexagon::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+$n: 16;
+$m: 8;
+
+@keyframes random-animation {
+  @for $i from 0 through $n {
+    #{$i * 100% / $n} {
+      transform: rotate(random(360) + deg) translate(random($n * 3 / $m) + em);
+    }
+  }
+}
+
+.hex {
+  position: absolute;
+  &--1 {
+    top: -58px;
+    left: 4px;
+    opacity: .2;
+    animation: random-animation 45s infinite;
+  }
+
+  &--2 {
+    top: 186px;
+    left: 22px;
+    opacity: .3;
+    animation: random-animation 31s infinite;
+  }
+
+  &--3 {
+    top: 241px;
+    right: 16px;
+    opacity: .4;
+    animation: random-animation 36s infinite;
+  }
+
+  &--4 {
+    bottom: 48px;
+    left: -20px;
+    opacity: .2;
+    animation: random-animation 42s infinite;
+  }
+
+  &--5 {
+    top: -26px;
+    right: 195px;
+    opacity: .3;
+    animation: random-animation 37s infinite;
+  }
+
+  &--6 {
+    top: -42px;
+    left: 452px;
+    opacity: .2;
+    animation: random-animation 29s infinite;
+  }
+
+  .hexagon:nth-child(1n) {
+    opacity: .2;
+  }
+
+  .hexagon:nth-child(2n) {
+    transform: translate(50px, 25px);
+    opacity: .4;
+  }
+
+  .hexagon:nth-child(3n) {
+    transform: translate(-50px, -30px);
+    opacity: .6;
+  }
+
+  &--blue .hexagon {
+    background: $blue;
+    &::before {
+      border-bottom: 25px solid $blue;
+    }
+    &::after {
+      border-top: 25px solid $blue;
+    }
+  }
+  &--blue-light .hexagon {
+    background: $blue-light;
+    &::before {
+      border-bottom: 25px solid $blue-light;
+    }
+    &::after {
+      border-top: 25px solid $blue-light;
+    }
+  }
+  &--green .hexagon {
+    background: $green;
+    &::before {
+      border-bottom: 25px solid $green;
+    }
+    &::after {
+      border-top: 25px solid $green;
+    }
+  }
+  &--red .hexagon {
+    background: $red;
+    &::before {
+      border-bottom: 25px solid $red;
+    }
+    &::after {
+      border-top: 25px solid $red;
+    }
+  }
+}
