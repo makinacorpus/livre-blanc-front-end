@@ -3,14 +3,14 @@
   - Pourquoi ce livre ?
   - Les principales définitions
 * <span class="icon">![](assets/img/picto-front-end.svg)</span>
-  Les enjeux du développement Front-End
+  Les enjeux du développement&nbsp;Front-End
   - Fonctionnement
   - Séparation Back-End/Front-End
   - Les approches possibles
 * <span class="icon">![](assets/img/picto-frameworks.svg)</span>
-  Les frameworks
+  Les Frameworks
   - Introduction sur les frameworks
-  - Les frameworks
+  - Les Frameworks
     * AngularJS 1
     * AngularJS 2
     * React
@@ -19,7 +19,7 @@
     * Backbone.js
   - Synthèse
 * <span class="icon">![](assets/img/picto-environnement.svg)</span>
-  L'environnement du développement Front-End
+  L'environnement du développement&nbsp;Front-End
 * <span class="icon">![](assets/img/picto-mobile.svg)</span>
   L'aspect mobile
   - Responsive Web Design
