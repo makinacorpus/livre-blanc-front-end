@@ -1,0 +1,22 @@
+{
+  "name": "livre-blanc-front-end",
+  "version": "1.0.0",
+  "description": "Page de présentation du Livre Blanc Front-End de Makina Corpus.",
+  "main": "assets/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makinacorpus/livre-blanc-front-end.git"
+  },
+  "author": "Alexandra JANIN - Makina Corpus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/makinacorpus/livre-blanc-front-end/issues"
+  },
+  "homepage": "https://github.com/makinacorpus/livre-blanc-front-end#readme",
+  "dependencies": {
+    "whatwg-fetch": "^1.0.0"
+  }
+}
