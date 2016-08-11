@@ -5,13 +5,14 @@ layout: default
 <header>
   <div class="wrapper">
     <div class="presentation">
-      <h1>Livre Blanc Front-End</h1>
+      <h1>Livre&nbsp;Blanc Front-End</h1>
       <h2>Tout ce que qu'il faut savoir pour bien débuter un projet Front-End.</h2>
 
-      <form action="">
-        <input type="email" placeholder="Email" />
-        <button type="submit" class="button">Télécharger le Livre Blanc</button>
+      <form id="download">
+        <input type="email" placeholder="Email" autocomplete="on" />
+        <button type="submit" class="button">Télécharger le Livre&nbsp;Blanc</button>
       </form>
+      <p class="form-response" id="download-response"></p>
     </div>
 
     <div class="book">
@@ -93,11 +94,16 @@ layout: default
 
 <section class="stay-in-touch">
   <div class="wrapper">
-    <h4>Vous souhaitez être tenu au courant lors de la publication de nos prochains Livres Blancs&nbsp;?</h4>
-    <form action="">
-      <input type="email" class="min" placeholder="Email" />
-      <button type="submit" class="button min">M'inscrire à la newsletter</button>
+    <h4>Vous souhaitez être tenu au courant lors de la publication de nos prochains Livres&nbsp;Blancs&nbsp;?</h4>
+    <form id="newsletter">
+      <div class="newsletter-form">
+        <input type="email" class="min" placeholder="Email" />
+        <button type="submit" class="button min">M'inscrire à la newsletter</button>
+      </div>
+      <p class="form-response" id="newsletter-response"></p>
     </form>
+
+    <!-- <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.mailjet.com/widget/iframe/xhH/1q0" width="730" height="202"></iframe> -->
   </div>
 </section>
 
@@ -108,7 +114,7 @@ layout: default
         CC 2016 <a href="http://makina-corpus.com/" target="_blank">Makina Corpus</a>
       </p>
       <p>
-        Les icons du sommaire sont sous licence Creative Commons. Source: <a href="https://thenounproject.com" target="_blank">Noun Project</a>.<br>
+        Les icons du sommaire sont sous licence Creative Commons. Source: <a href="https://thenounproject.com" target="_blank">Noun&nbsp;Project</a>.<br>
         Liste des auteurs (dans l'ordre) : joe pictos, Umesh Vgl, Juan Pablo Bravo, Andreas, Aybige Aya, Ema Dimitrova.
       </p>
     </div>
