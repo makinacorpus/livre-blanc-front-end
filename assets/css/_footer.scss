@@ -42,4 +42,22 @@ footer {
       padding-left: 4em;
     }
   }
+
+  .makina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+  }
+
+  .social {
+    path {
+      fill: $green;
+    }
+    &:hover {
+      path {
+        fill: white;
+      }
+    }
+  }
 }

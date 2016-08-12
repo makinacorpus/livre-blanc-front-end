@@ -1,5 +1,5 @@
-// var API_URL = 'http://127.0.0.1:5000';
-var API_URL = 'https://mails-livre-blanc.herokuapp.com';
+var API_URL = 'http://127.0.0.1:5000';
+// var API_URL = 'https://mails-livre-blanc.herokuapp.com';
 
 // Create a new instance of ladda for the specified button
 var buttonD = window.Ladda.create(document.getElementById('download-button'));
