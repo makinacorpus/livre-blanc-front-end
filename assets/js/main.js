@@ -21,7 +21,7 @@ function download(e) {
   });
 
   var email = e.target[0].value;
-  var url = API_URL + '/download?email=' + email;
+  var url = API_URL + '/predownload?email=' + email;
 
   fetch(url)
   .then(function(response) {
@@ -32,7 +32,7 @@ function download(e) {
     }
 
     response.json().then(function() {
-      showResponse('download-response', 'success', 'Un email contenant un lien vers le livre blanc vous a été envoyé avec succès.');
+      showResponse('download-response', 'success', 'Votre email a bien été enregistré. Vous recevrez le livre blanc prochainement. Merci');
     });
   })
   .catch(function(error) {

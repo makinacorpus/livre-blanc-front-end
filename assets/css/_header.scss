@@ -54,6 +54,12 @@ header {
     line-height: 1.4em;
   }
 
+  h3 {
+    color: $red;
+    font-size: 1em;
+    font-weight: 800;
+  }
+
   form {
     display: flex;
     flex-direction: column;
