@@ -4,7 +4,7 @@
   "description": "Page de présentation du Livre Blanc Front-End de Makina Corpus.",
   "main": "assets/js/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "uglifyjs node_modules/whatwg-fetch/fetch.js node_modules/ladda/js/spin.js node_modules/ladda/js/ladda.js -o assets/js/vendors.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "dependencies": {
     "ladda": "^1.0.0",
     "whatwg-fetch": "^1.0.0"
+  },
+  "devDependencies": {
+    "concat": "0.0.1-security"
   }
 }
