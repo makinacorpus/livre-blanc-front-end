@@ -21,7 +21,87 @@ input[type="text"],input[type="email"] {
   }
 }
 
-.button {
+.form-response {
+  font-size: .8em;
+  line-height: 1.6em;
+  width: 100%;
+  margin: .5em 0;
+  text-align: left;
+  font-weight: bold;
+  color: $blue;
+  display: none;
+  &.success, &.warning, &.error {
+    display: block;
+  }
+  &.warning {
+    color: lighten($grey, 40%);
+  }
+  &.error {
+    color: $red;
+  }
+}
+
+/*!
+ * Ladda
+ * http://lab.hakim.se/ladda
+ * MIT licensed
+ *
+ * Copyright (C) 2016 Hakim El Hattab, http://hakim.se
+ */
+
+
+/*************************************
+ * CONFIG
+ */
+
+$spinnerSize: 24px;
+
+
+/*************************************
+ * MIXINS
+ */
+
+@mixin prefix ( $property, $value ) {
+	-webkit-#{$property}: $value;
+	   -moz-#{$property}: $value;
+	    -ms-#{$property}: $value;
+	     -o-#{$property}: $value;
+	        #{$property}: $value;
+}
+
+@mixin transition( $value ) {
+	-webkit-transition: $value !important; // important to override bootstrap
+	   -moz-transition: $value !important;
+	    -ms-transition: $value !important;
+	     -o-transition: $value !important;
+	        transition: $value !important;
+}
+
+@mixin transform( $value ) {
+	@include prefix( transform, $value );
+}
+
+@mixin transform-origin( $value ) {
+	@include prefix( transform-origin, $value );
+}
+
+@mixin buttonColor( $name, $color ) {
+	&[data-color=#{$name}] {
+		background: $color;
+
+		&:hover {
+			background-color: lighten( $color, 5% );
+		}
+	}
+}
+
+
+/*************************************
+ * BUTTON BASE
+ */
+
+.ladda-button {
+	position: relative;
   margin: .5em 0;
   background: transparent;
   border: solid 3px $blue-light;
@@ -50,26 +130,94 @@ input[type="text"],input[type="email"] {
       font-size: .8em;
       padding: .8em 1.25em;
     }
-
   }
 }
 
-.form-response {
-  font-size: .8em;
-  line-height: 1.6em;
-  width: 100%;
-  margin: .5em 0;
-  text-align: left;
-  font-weight: bold;
-  color: $blue;
-  display: none;
-  &.success, &.warning, &.error {
-    display: block;
-  }
-  &.warning {
-    color: lighten($grey, 40%);
-  }
-  &.error {
-    color: $red;
-  }
+
+/* Spinner animation */
+.ladda-button .ladda-spinner {
+	position: absolute;
+	z-index: 2;
+	display: inline-block;
+	width: $spinnerSize;
+	height: $spinnerSize;
+	top: 50%;
+	margin-top: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Button label */
+.ladda-button .ladda-label {
+	position: relative;
+	z-index: 3;
+}
+
+/* Progress bar */
+.ladda-button .ladda-progress {
+	position: absolute;
+	width: 0;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba( 0, 0, 0, 0.2 );
+
+	visibility: hidden;
+	opacity: 0;
+
+	@include transition( 0.1s linear all );
+}
+	.ladda-button[data-loading] .ladda-progress {
+		opacity: 1;
+		visibility: visible;
+	}
+
+
+/*************************************
+ * EASING
+ */
+
+.ladda-button,
+.ladda-button .ladda-spinner,
+.ladda-button .ladda-label {
+	@include transition( 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) all );
+}
+
+.ladda-button[data-style=zoom-in],
+.ladda-button[data-style=zoom-in] .ladda-spinner,
+.ladda-button[data-style=zoom-in] .ladda-label,
+.ladda-button[data-style=zoom-out],
+.ladda-button[data-style=zoom-out] .ladda-spinner,
+.ladda-button[data-style=zoom-out] .ladda-label {
+	@include transition( 0.3s ease all );
+}
+
+
+
+/*************************************
+ * SLIDE UP
+ */
+.ladda-button[data-style=slide-up] {
+	overflow: hidden;
+
+	.ladda-label {
+		position: relative;
+	}
+	.ladda-spinner {
+		left: 50%;
+		margin-left: 0;
+		margin-top: 1em;
+	}
+
+	&[data-loading] {
+    background: $blue-light;
+		.ladda-label {
+			opacity: 0;
+			top: -1em;
+		}
+		.ladda-spinner {
+			opacity: 1;
+			margin-top: 0;
+		}
+	}
 }

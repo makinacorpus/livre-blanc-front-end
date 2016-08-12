@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/makinacorpus/livre-blanc-front-end#readme",
   "dependencies": {
+    "ladda": "^1.0.0",
     "whatwg-fetch": "^1.0.0"
   }
 }

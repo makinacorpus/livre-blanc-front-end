@@ -76,6 +76,13 @@ h3 {
   }
 }
 
+.hide-sm {
+  display: none;
+  @media screen and (min-width: $breakpoint) {
+    display: inline;
+  }
+}
+
 @import 'header';
 @import 'forms';
 @import 'frameworks';
