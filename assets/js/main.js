@@ -1,5 +1,5 @@
-// var API_URL = 'http://127.0.0.1:5000';
-var API_URL = 'https://mails-livre-blanc.herokuapp.com';
+var API_URL = 'http://127.0.0.1:5000';
+// var API_URL = 'https://mails-livre-blanc.herokuapp.com';
 
 function showResponse(element, type, text) {
   document.getElementById(element).innerHTML = text;
@@ -9,7 +9,7 @@ function showResponse(element, type, text) {
 function download(e) {
   e.preventDefault(e);
   var email = e.target[0].value;
-  var url = API_URL + '/download/' + email;
+  var url = API_URL + '/download?email=' + email;
 
   fetch(url)
   .then(function(response) {
@@ -19,7 +19,7 @@ function download(e) {
     }
 
     response.json().then(function() {
-      showResponse('download-response', 'success', 'Un email contenant un lien vers le Livre Blanc vous a été envoyé avec succès.');
+      showResponse('download-response', 'success', 'Un email contenant un lien vers le livre blanc vous a été envoyé avec succès.');
     });
   })
   .catch(function(error) {
@@ -30,7 +30,7 @@ function download(e) {
 function sendmail(e) {
   e.preventDefault(e);
   var email = e.target[0].value;
-  var url = API_URL + '/contactslist/' + email;
+  var url = API_URL + '/subscribe?email=' + email;
 
   fetch(url)
   .then(function(response) {
@@ -40,7 +40,6 @@ function sendmail(e) {
     }
 
     response.json().then(function(contact) {
-      console.log(contact);
       if (!contact.new) {
         showResponse('newsletter-response', 'warning', 'Vous êtes déjà inscrit ! Merci :)');
       } else {
