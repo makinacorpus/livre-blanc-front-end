@@ -7,6 +7,13 @@ function showResponse(element, type, text) {
 }
 
 function download(e) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Button',
+    eventAction: 'download',
+    eventLabel: 'Téléchargement livre blanc'
+  });
+
   e.preventDefault(e);
   var email = e.target[0].value;
   var url = API_URL + '/download?email=' + email;
@@ -27,7 +34,14 @@ function download(e) {
   });
 }
 
-function sendmail(e) {
+function subscribe(e) {
+  window.ga('send', {
+    hitType: 'event',
+    eventCategory: 'Button',
+    eventAction: 'subscribe',
+    eventLabel: 'Inscription newsletter'
+  });
+
   e.preventDefault(e);
   var email = e.target[0].value;
   var url = API_URL + '/subscribe?email=' + email;
@@ -53,4 +67,4 @@ function sendmail(e) {
 }
 
 document.getElementById('download').addEventListener('submit', download, false);
-document.getElementById('newsletter').addEventListener('submit', sendmail, false);
+document.getElementById('newsletter').addEventListener('submit', subscribe, false);
