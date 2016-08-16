@@ -4,7 +4,8 @@
   "description": "Page de présentation du Livre Blanc Front-End de Makina Corpus.",
   "main": "assets/js/main.js",
   "scripts": {
-    "build": "uglifyjs node_modules/whatwg-fetch/fetch.js node_modules/ladda/js/spin.js node_modules/ladda/js/ladda.js -o assets/js/vendors.js"
+    "build": "uglifyjs node_modules/whatwg-fetch/fetch.js node_modules/ladda/js/spin.js node_modules/ladda/js/ladda.js -o assets/js/vendors.js",
+    "postinstall": "bundle install"
   },
   "repository": {
     "type": "git",

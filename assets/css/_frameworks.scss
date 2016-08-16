@@ -29,11 +29,8 @@
   img {
     width: 90px;
     height: 90px;
-    -webkit-filter: grayscale(1);
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: url(#greyscale);
-    filter: gray;
     transition: all .3s;
     opacity: .8;
   }
@@ -48,9 +45,6 @@
       cursor: pointer;
       img {
         -webkit-filter: none;
-        -webkit-filter: none;
-        filter: none;
-        filter: none;
         filter: none;
         opacity: 1;
       }
