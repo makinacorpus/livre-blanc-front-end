@@ -1,5 +1,5 @@
 .pourquoi {
-  background: linear-gradient($blue, $blue-light);
+  background: linear-gradient(darken($pink, 20%), $pink);
   position: relative;
   color: white;
   text-align: center;
@@ -10,9 +10,15 @@
       display: block;
       width: 100px;
       height: 3px;
+      // background: white;
       background: $green;
       margin: 1em auto 0 auto;
     }
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6em;
   }
 
   > div {
@@ -28,7 +34,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: .2;
+    opacity: .1;
     background: url('../img/bg-ordinateurs.png') 0 0;
     background-size: cover;
   }
