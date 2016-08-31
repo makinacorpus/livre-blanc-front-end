@@ -9,6 +9,11 @@ header {
     top: 0;
   }
 
+  form > input, button {
+    padding: 0 .8em;
+    width: 100%;
+  }
+
   .wrapper {
     position: relative;
     z-index: 2;
@@ -26,14 +31,14 @@ header {
       @media screen and (min-width: $breakpoint) {
         width: 50%;
         &.presentation {
+          display: flex;
+          flex-direction: column;
           padding-right: 2em;
           margin-bottom: 1em;
         }
       }
     }
   }
-
-
 
   h1 {
     margin: 0;
@@ -54,11 +59,6 @@ header {
     line-height: 1.4em;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
 }
 
 .book {
@@ -67,6 +67,23 @@ header {
     height: auto;
     margin: 0 auto;
     box-shadow: 0 4px 10px rgba(82,44,0,.3);
+  }
+}
+
+.download {
+  overflow: hidden;
+  background: $blue;
+  color: white;
+  height: 0;
+  transition: height .5s;
+
+  &.open {
+    height: auto;
+  }
+  .wrapper {
+    max-width: 600px;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 

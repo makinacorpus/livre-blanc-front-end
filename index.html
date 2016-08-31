@@ -3,22 +3,37 @@ layout: default
 ---
 
 <header>
-  <div class="wrapper">
-    <div class="presentation">
-      <h1>Livre&nbsp;blanc Front-End</h1>
-      <h2>Tout ce que qu'il faut savoir pour bien débuter un projet Front-End.</h2>
+    <div class="wrapper">
+      <div class="presentation">
+        <h1>Livre&nbsp;blanc Front-End</h1>
+        <h2>Tout ce que qu'il faut savoir pour bien débuter un projet Front-End.</h2>
+        <form id="email">
+          <input type="email" placeholder="Email" required />
+          <button id="email-button" type="submit" class="ladda-button" >Télécharger<span class="hide-sm"> le livre&nbsp;blanc</span></button>
+        </form>
+      </div>
 
-      <form id="download">
-        <input type="email" placeholder="Email" required />
-        <button id="download-button" data-spinner-size="36" type="submit" class="ladda-button" data-style="slide-up">Télécharger<span class="hide-sm"> le livre&nbsp;blanc</span></button>
-      </form>
-      <p class="form-response" id="download-response"></p>
+      <div class="book">
+        <img src="assets/img/cover-blue.png" alt="">
+      </div>
     </div>
 
-    <div class="book">
-      <img src="assets/img/cover-blue.png" alt="">
-    </div>
-  </div>
+    <section id="download-section" class="download">
+      <a href="" name="download"></a>
+      <div class="wrapper">
+        <p>Pour recevoir le livre blanc, merci de compléter le formulaire ci-dessous</p>
+        <form id="download">
+          <input type="text" placeholder="Nom" id="nom" required class="min" />
+          <input type="text" placeholder="Prénom" id="prenom" required class="min" />
+          <input type="text" placeholder="Société" id="societe" required class="min" />
+          <input type="text" placeholder="Fonction" id="fonction" required class="min" />
+          <input type="text" placeholder="Code postal" id="codepostal" required class="min" />
+          <input type="text" placeholder="Pays" id="pays" required class="min" />
+          <button id="download-button" data-spinner-size="36" type="submit" class="ladda-button min" data-style="slide-up">Valider</button>
+          <p class="form-response" id="download-response"></p>
+        </form>
+      </div>
+    </section>
 
 </header>
 
