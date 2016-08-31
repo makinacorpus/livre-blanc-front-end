@@ -79,13 +79,10 @@ var smoothScroll = function (anchor, duration) {
 Open form after enter email
 ******************************************************/
 
-var email = '';
-
 function openForm(e) {
     e.preventDefault(e);
 
     var downloadSection = document.getElementById('download-section');
-    email = e.target[0].value;
 
     document.getElementById('download').classList.remove('close');
     downloadSection.classList.toggle('open');
@@ -101,7 +98,10 @@ function download(e) {
   e.preventDefault(e);
 
   var data = new FormData();
+
+  var email = document.getElementById('email').value;
   data.append('email', email);
+
   for (var i = 0; i < e.target.length; i++) {
     var el = e.target[i];
 
@@ -129,7 +129,7 @@ function download(e) {
       return;
     }
 
-    response.json().then(function() {
+    response.json().then(function(response) {
       document.getElementById('download-section').classList.add('close');
       showResponse('download-response', 'success', 'Un email contenant un lien vers le livre blanc vous a été envoyé avec succès.');
     });
@@ -203,7 +203,7 @@ function closeForm(e) {
 Events
 ******************************************************/
 
-document.getElementById('email').addEventListener('submit', openForm, false);
+document.getElementById('getemail').addEventListener('submit', openForm, false);
 document.getElementById('download').addEventListener('submit', download, false);
 document.getElementById('close').addEventListener('click', closeForm, false);
 document.getElementById('newsletter').addEventListener('submit', subscribe, false);
