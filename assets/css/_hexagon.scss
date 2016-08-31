@@ -93,22 +93,22 @@ $m: 8;
     opacity: .6;
   }
 
-  &--blue .hexagon {
-    background: $blue;
+  &--green .hexagon {
+    background: $green;
     &::before {
-      border-bottom: 25px solid $blue;
+      border-bottom: 25px solid $green;
     }
     &::after {
-      border-top: 25px solid $blue;
+      border-top: 25px solid $green;
     }
   }
-  &--blue-light .hexagon {
-    background: $blue-light;
+  &--green .hexagon {
+    background: $green;
     &::before {
-      border-bottom: 25px solid $blue-light;
+      border-bottom: 25px solid $green;
     }
     &::after {
-      border-top: 25px solid $blue-light;
+      border-top: 25px solid $green;
     }
   }
   &--green .hexagon {

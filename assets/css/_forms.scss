@@ -28,7 +28,7 @@ input[type="text"],input[type="email"] {
   margin: .5em 0;
   text-align: left;
   font-weight: bold;
-  color: $blue;
+  color: $grey;
   display: none;
   &.success, &.warning, &.error {
     display: block;
@@ -104,16 +104,16 @@ $spinnerSize: 32px;
 	position: relative;
   margin: .5em 0;
   background: transparent;
-  border: solid 3px $blue-light;
-  color: $blue-light;
+  border: solid 3px $green;
+  color: $green;
   text-transform: uppercase;
   padding: 1.25em;
   font-weight: 800;
   transition: all .3s;
   cursor: pointer;
   &:hover, &:focus {
-    background: $blue-light;
-    border-color: $blue-light;
+    background: $green;
+    border-color: $green;
     color: $grey-light;
   }
 
@@ -210,7 +210,7 @@ $spinnerSize: 32px;
 	}
 
 	&[data-loading] {
-    background: $blue-light;
+    background: $green;
 		.ladda-label {
 			opacity: 0;
 			top: -1em;
