@@ -87,6 +87,7 @@ function openForm(e) {
     var downloadSection = document.getElementById('download-section');
     email = e.target[0].value;
 
+    document.getElementById('download').classList.remove('close');
     downloadSection.classList.toggle('open');
     smoothScroll(downloadSection, 500 || 500);
 }
@@ -117,9 +118,7 @@ function download(e) {
     eventLabel: 'Téléchargement livre blanc'
   });
 
-  var url = API_URL + '/download';
-
-  fetch(url, {
+  fetch(API_URL + '/download', {
     method: 'POST',
     body: data
   })
@@ -131,6 +130,7 @@ function download(e) {
     }
 
     response.json().then(function() {
+      document.getElementById('download-section').classList.add('close');
       showResponse('download-response', 'success', 'Un email contenant un lien vers le livre blanc vous a été envoyé avec succès.');
     });
   })
@@ -182,8 +182,30 @@ function subscribe(e) {
   });
 }
 
+
+/******************************************************
+Close form
+******************************************************/
+
+function closeForm(e) {
+  e.preventDefault(e);
+  document.getElementById("download").reset();
+  document.getElementById('download-section').classList.remove('open');
+  document.getElementById('download-section').classList.remove('close');
+  var response = document.getElementById('download-response');
+  response.classList.remove('success');
+  response.classList.remove('error');
+  response.innerHTML = '';
+}
+
+
+/******************************************************
+Events
+******************************************************/
+
 document.getElementById('email').addEventListener('submit', openForm, false);
 document.getElementById('download').addEventListener('submit', download, false);
+document.getElementById('close').addEventListener('click', closeForm, false);
 document.getElementById('newsletter').addEventListener('submit', subscribe, false);
 
 

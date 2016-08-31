@@ -3,6 +3,10 @@ header {
   overflow: hidden;
   position: relative;
 
+  p, .form-response {
+    text-align: center;
+  }
+
   canvas {
     position: absolute;
     z-index: 1;
@@ -71,19 +75,72 @@ header {
 }
 
 .download {
-  overflow: hidden;
-  background: $blue;
+  background: $grey;
   color: white;
+  overflow: hidden;
   height: 0;
   transition: height .5s;
+  position: relative;
+  display: flex;
+
+  .form-response.success {
+    color: white;
+    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      margin-right: 10px;
+      margin-top: 15px;
+      content: '';
+      width: 64px;
+      height: 64px;
+      display: block;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 32 40" enable-background="new 0 0 32 32" xml:space="preserve"><g display="none"><rect x="-350.895" y="-163.339" display="inline" fill="#000000" width="435.561" height="207"/></g><g><g><path fill="#{$green}" d="M0,25.481h7.668v5.766l7.07-5.766H32V0.752H0V25.481z M1,1.752h30v22.729H14.738h-0.356l-0.276,0.225l-5.438,4.435v-3.66    v-1h-1H1V1.752z"/><polygon fill="#{$green}" points="22.194,8.25 21.372,7.679 14.883,17.023 10.544,13.479 9.911,14.255 15.088,18.482   "/></g></g><g display="none"><g display="inline"><path d="M31,1.752v22.729H14.738h-0.356l-0.276,0.225l-5.438,4.435v-3.66v-1h-1H1V1.752H31 M32,0.752H0v24.729h7.668v5.766    l7.07-5.766H32V0.752L32,0.752z"/></g><g display="inline"><polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="10.227,13.867 14.986,17.752 21.783,7.964   "/></g></g><g display="none"><g display="inline"><path fill="#{$green}" d="M0,25.481h7.668v5.766l7.07-5.766H32V0.752H0V25.481z M2,2.752h28v20.729H14.738h-0.712l-0.552,0.45l-3.806,3.104v-1.554    v-2h-2H2V2.752z"/><polygon points="22.604,8.535 20.962,7.394 14.78,16.295 10.86,13.092 9.595,14.641 15.19,19.211   "/></g></g><g display="none"><g display="inline"><path d="M31.5,1.252v23.729H14.738H14.56l-0.138,0.113l-6.254,5.101v-4.713v-0.5h-0.5H0.5V1.252H31.5 M32,0.752H0v24.729h7.668    v5.766l7.07-5.766H32V0.752L32,0.752z"/></g><g display="inline"><polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="10.227,13.867 14.986,17.752     21.783,7.964   "/></g></g><text x="0" y="47" fill="#000000" font-size="5px" font-weight="bold" font-family="Helvetica Neue, Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Alfredo Hernandez</text><text x="0" y="52" fill="#000000" font-size="5px" font-weight="bold" font-family="Helvetica Neue, Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &.close {
+    form {
+      display: none;
+    }
+    &:hover .close-button {
+      width: 145px;
+    }
+  }
+
+  .close-button {
+    width: 0;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 100px;
+    height: auto;
+    background-color: $pink;
+    line-height: 145px;
+    transition: width, .2s;
+  }
+
 
   &.open {
     height: auto;
   }
   .wrapper {
-    max-width: 600px;
+    padding-top: 2em;
+    padding-bottom: 2em;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
