@@ -37,14 +37,14 @@ body {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  padding: 6em .8em 6em .8em;
+  padding: 7em .8em 7em .8em;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media screen and (min-width: $breakpoint) {
     max-width: $container-width;
-     padding: 6em .8em 6em .8em;
+     padding: 7em .8em 7em .8em;
   }
 }
 
