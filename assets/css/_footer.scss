@@ -33,6 +33,18 @@ footer {
     .wrapper {
       flex-direction: row;
     }
+
+    .logo-makina {
+      width: auto !important;
+    }
+
+    .twitter {
+      margin-left: 2em;
+    }
+  }
+
+  .logo-makina {
+    width: 100%
   }
 
   .makina {
@@ -40,13 +52,11 @@ footer {
     align-items: center;
     justify-content: space-between;
     width: auto;
+    flex-wrap: wrap;
   }
 
-  .social {
-    margin-left: 2em;
-    }
-
   .github {
+    margin-left: 2em;
     path {
       fill: $makinaGreen;
     }
@@ -72,6 +82,7 @@ footer {
   }
 
   .slideshare {
+    margin-left: 2em;
     circle {
       fill: $makinaGreen;
     }
