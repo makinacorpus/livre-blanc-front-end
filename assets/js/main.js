@@ -7,11 +7,7 @@
 API URLs
 ******************************************************/
 
-<<<<<<< HEAD
-// var API_URL = 'http://127.0.0.1:5000';
-=======
 // var API_URL = 'http://127.0.0.1:4000';
->>>>>>> master
 var API_URL = 'https://mails-livre-blanc.herokuapp.com';
 
 
