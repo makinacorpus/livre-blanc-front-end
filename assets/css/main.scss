@@ -18,14 +18,16 @@ $red: #d35b3a;
 $blue: #1559af;
 $blue-light: #0096bd;
 $pink: #d52668;
-
+$makinaGreen : #b2b62e;
+$black: #241f1c;
+$linen: #f0efea;
 // GENERAL STYLES
-* {
+* { 
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;;
   color: $grey;
   font-size: 18px;
   line-height: 28px;
@@ -35,14 +37,14 @@ body {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  padding: 2em .8em;
+  padding: 6em .8em 6em .8em;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media screen and (min-width: $breakpoint) {
     max-width: $container-width;
-    padding: 4em .8em;
+     padding: 6em .8em 6em .8em;
   }
 }
 

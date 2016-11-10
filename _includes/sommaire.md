@@ -1,29 +1,24 @@
-* <span class="icon">![](assets/img/picto-edito.svg)</span>
-  Edito
+* <span class="title">Edito</span>
   - Pourquoi ce livre ?
   - Les principales définitions
-* <span class="icon">![](assets/img/picto-front-end.svg)</span>
-  Les enjeux du développement&nbsp;Front-End
+* <span class="title">Les enjeux du développement&nbsp;Front-End</span>
   - Fonctionnement
   - Séparation Back-End/Front-End
   - Les approches possibles
-* <span class="icon">![](assets/img/picto-frameworks.svg)</span>
-  Les Frameworks
+* <span class="title">Les Frameworks</span>
   - Introduction sur les frameworks
   - Les Frameworks
-    * AngularJS 1
-    * AngularJS 2
-    * React
-    * VueJS
-    * EmberJS
-    * Backbone.js
+  - AngularJS 1
+  - AngularJS 2
+  - React
+  - VueJS
+  - EmberJS
+  - Backbone.js
   - Synthèse
-* <span class="icon">![](assets/img/picto-environnement.svg)</span>
-  L'environnement du développement&nbsp;Front-End
-* <span class="icon">![](assets/img/picto-mobile.svg)</span>
-  L'aspect mobile
+* <span class="title">L'environnement du développement&nbsp;Front-End</span>
+* <span class="title">L'aspect mobile</span>
   - Responsive Web Design
   - Le mode hors-ligne ou dégradé
   - Progressive Web App
-* <span class="icon">![](assets/img/picto-conclusion.svg)</span>
-  Conclusion
+* <span class="title">Conclusion</span>
+  

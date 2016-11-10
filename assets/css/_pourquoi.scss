@@ -1,41 +1,26 @@
 .pourquoi {
-  background: linear-gradient(darken($pink, 20%), $pink);
+  background: $makinaGreen;
   position: relative;
   color: white;
   text-align: center;
 
   h3 {
-    &:after {
-      content: '';
-      display: block;
-      width: 100px;
-      height: 3px;
-      // background: white;
-      background: $green;
-      margin: 1em auto 0 auto;
-    }
+    color: white;
+    font-weight: bold;
+    font-size: 2.2em;
+    margin-bottom: 0px;
   }
 
   p {
     font-size: 1.2em;
     line-height: 1.6em;
+    color: $black;
+    margin-top: 1.5em;
+    font-weight: 500;
   }
 
   > div {
     position: relative;
     z-index: 1;
-  }
-
-  &:before {
-    z-index: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: .1;
-    background: url('../img/bg-ordinateurs.png') 0 0;
-    background-size: cover;
   }
 }

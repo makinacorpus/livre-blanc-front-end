@@ -104,16 +104,15 @@ $spinnerSize: 32px;
 	position: relative;
   margin: .5em 0;
   background: transparent;
-  border: solid 3px $green;
-  color: $green;
+  border: solid 0px $makinaGreen;
+  color: $black;
   text-transform: uppercase;
   padding: 1.25em;
-  font-weight: 800;
+  font-weight: 600;
   transition: all .3s;
+	background: $makinaGreen;
   cursor: pointer;
-  &:hover, &:focus {
-    background: $green;
-    border-color: $green;
+  &:hover {
     color: $grey-light;
   }
 

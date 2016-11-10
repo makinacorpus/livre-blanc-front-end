@@ -7,8 +7,8 @@
 API URLs
 ******************************************************/
 
-var API_URL = 'http://127.0.0.1:5000';
-// var API_URL = 'https://mails-livre-blanc.herokuapp.com';
+// var API_URL = 'http://127.0.0.1:4000';
+var API_URL = 'https://mails-livre-blanc.herokuapp.com';
 
 
 /******************************************************
@@ -17,7 +17,6 @@ Loading buttons
 
 // Create a new instance of ladda for the specified button
 var buttonD = window.Ladda.create(document.getElementById('download-button'));
-var buttonN = window.Ladda.create(document.getElementById('newsletter-button'));
 
 
 /******************************************************
@@ -25,8 +24,10 @@ Form response
 ******************************************************/
 
 function showResponse(element, type, text) {
-  document.getElementById(element).innerHTML = text;
-  document.getElementById(element).classList = 'form-response ' + type;
+  if (document.getElementById(element)) {
+    document.getElementById(element).innerHTML = text;
+    document.getElementById(element).classList = 'form-response ' + type;
+  }
 }
 
 
@@ -81,7 +82,6 @@ Open form after enter email
 
 function openForm(e) {
     e.preventDefault(e);
-
     var downloadSection = document.getElementById('download-section');
 
     document.getElementById('download').classList.remove('close');
@@ -117,6 +117,11 @@ function download(e) {
     eventAction: 'download',
     eventLabel: 'Téléchargement livre blanc'
   });
+  
+  // Subscribe newsletter
+  if (document.getElementById('chk_newsletter').checked) {
+    subscribe(e);
+  }
 
   fetch(API_URL + '/download', {
     method: 'POST',
@@ -138,6 +143,7 @@ function download(e) {
     buttonD.stop();
     showResponse('download-response', 'error', 'Erreur serveur : ' + error);
   });
+
 }
 
 
@@ -147,8 +153,6 @@ Subscribe newsletter
 
 function subscribe(e) {
   e.preventDefault(e);
-  buttonN.start();
-  buttonN.start();
 
   window.ga('send', {
     hitType: 'event',
@@ -177,7 +181,6 @@ function subscribe(e) {
     });
   })
   .catch(function(error) {
-    buttonN.stop();
     showResponse('newsletter-response', 'error', 'Erreur serveur : ' + error);
   });
 }
@@ -206,7 +209,5 @@ Events
 document.getElementById('getemail').addEventListener('submit', openForm, false);
 document.getElementById('download').addEventListener('submit', download, false);
 document.getElementById('close').addEventListener('click', closeForm, false);
-document.getElementById('newsletter').addEventListener('submit', subscribe, false);
-
 
 })();
