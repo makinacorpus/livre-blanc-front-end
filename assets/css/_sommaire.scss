@@ -21,7 +21,7 @@
     padding-top: 3em;
     padding-bottom: 6em;
     > li {
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 1.75em;
       display: flex;
       flex-wrap: wrap;
@@ -41,7 +41,7 @@
         margin-top: 1em;
         flex: 0 0 100%;
         > li {
-          font-weight: 500;
+          font-weight: 400;
           list-style-type: none;
           border-left: 2px $makinaGreen solid;
           padding-left: 1em;
