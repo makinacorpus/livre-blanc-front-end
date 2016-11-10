@@ -21,26 +21,51 @@
     }
   }
 
+  h3 {
+    margin: 0;
+    color: $makinaGreen;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.3em;
+    max-width: none;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: $black;
+    margin-top: 1.5em;
+    font-weight: 500;
+  }
+
   h4 {
-    color: lighten($grey, 20%);
-    font-weight: 300;
+    color: $black;
+    font-weight: 400;
+    font-size: 1em;
   }
 
   img {
-    width: 90px;
-    height: 90px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: all .3s;
-    opacity: .8;
-  }
+    width: 100px;
+    height: 100px;
+  } 
 
   a {
     display: block;
     text-decoration: none;
     &:hover, &:focus {
       h4 {
-        color: darken($green, 20%);
+        &:after {
+          content: '';
+          display: block;
+          background: $makinaGreen;
+          height: 7px;
+          max-width: 100px;
+          width: 100%;
+          position: absolute;
+          z-index: -1;
+          margin-top: -18px;
+          animation: dessinIn 0.5s 0s ease-in-out forwards;
+        }
       }
       cursor: pointer;
       img {
@@ -54,5 +79,37 @@
   svg {
     display: none;
   }
-
+  
+  @keyframes dessinIn {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 100px;
+    }
+  }
+  @-webkit-keyframes dessinIn {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 100px;
+    }
+  }
+  @-moz-keyframes dessinIn {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 100px;
+    }
+  }
+  @-o-keyframes dessinIn {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 100px;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 footer {
-  background: $grey;
+  background: $black;
   color: white;
   font-size: 0.75em;
   line-height: 1.4em;
@@ -12,34 +12,26 @@ footer {
     }
   }
   .wrapper {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 5em;
+    padding-bottom: 2em;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
   }
-
-  .copyright {
-    flex: 1;
+  p {
+    text-align: center;
+    font-weight: 500;
   }
 
   img {
-    width: 100px;
+    width: 300px;
     height: auto;
-  }
-
-  .logo-makina {
-    padding-top: 1em;
   }
 
   @media screen and (min-width: $breakpoint) {
     .wrapper {
       flex-direction: row;
-    }
-
-    .logo-makina {
-      padding-left: 4em;
     }
   }
 
@@ -47,12 +39,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 220px;
+    width: auto;
   }
 
   .social {
+    margin-left: 2em;
+    }
+
+  .github {
     path {
-      fill: $green;
+      fill: $makinaGreen;
     }
     &:hover {
       path {
@@ -60,4 +56,30 @@ footer {
       }
     }
   }
+
+ .twitter {
+    path {
+      fill: $black;
+    }
+    circle {
+      fill: $makinaGreen;
+    }
+    &:hover {
+      circle {
+        fill: white;
+      }
+    }
+  }
+
+  .slideshare {
+    circle {
+      fill: $makinaGreen;
+    }
+    &:hover {
+      circle {
+        fill: white;
+      }
+    }
+  }
+
 }
