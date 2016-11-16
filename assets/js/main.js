@@ -39,7 +39,7 @@ var smoothScroll = function (anchor, duration) {
 
     // Calculate how far and how fast to scroll
     var startLocation = window.pageYOffset;
-    var endLocation = anchor.offsetTop;
+    var endLocation = anchor.offsetTop + 20;
     var distance = endLocation - startLocation;
     var increments = distance/(duration/16);
     var stopAnimation;
@@ -85,6 +85,7 @@ function openForm(e) {
     var downloadSection = document.getElementById('download-section');
 
     document.getElementById('download').classList.remove('close');
+    document.getElementById('downloadBook').classList.add('close');
     downloadSection.classList.toggle('open');
     smoothScroll(downloadSection, 500 || 500);
 }

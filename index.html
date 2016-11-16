@@ -6,46 +6,16 @@ layout: default
     <div class="wrapper">
       <div class="presentation">
         <h1>Livre&nbsp;blanc Front-End</h1>
-        <h2>Tout ce qu'il faut savoir pour bien débuter un projet Front-End.</h2>
-        <h3>Afin de mieux vous connaitre, nous vous demandons de renseigner quelques informations vous concernant avant de télécharger le livre blanc.</h3>
-        <form id="getemail"> 
-           <button id="email-button" type="submit" class="ladda-button" >compléter le formulaire</button> 
-        </form>     
+        <p class="introduction">Tout ce qu'il faut savoir pour bien débuter un projet Front-End.</p>
+            <h2>Pourquoi ce livre&nbsp;?</h2>
+            <p class="explain">Ce livre est destiné particulièrement aux personnes devant accompagner une équipe
+              de développeurs et souhaitant mieux comprendre le vocabulaire Front-End et les intérêts de chaque framework.</p>
       </div>
       <div class="book">
         <img src="assets/img/cover7.png" alt="">
       </div>
     </div>
 </header>
-
-<section id="download-section" class="download">
-  <a href="" name="download"></a>
-  <div class="wrapper">
-    <form id="download">
-      <p>Pour recevoir le livre blanc, merci de compléter le formulaire ci-dessous</p>
-      <input type="email" class="min" placeholder="Email" required  id="email" />
-      <input type="text" placeholder="Nom" id="nom" required class="min" />
-      <input type="text" placeholder="Prénom" id="prenom" required class="min" />
-      <input type="text" placeholder="Société" id="societe" required class="min" />
-      <input type="text" placeholder="Fonction" id="fonction" required class="min" />
-      <input type="text" placeholder="Code postal" id="codepostal" required class="min" />
-      <input type="text" placeholder="Pays" id="pays" required class="min" />
-      <label><input type="checkbox" id="chk_newsletter">  M'inscrire à la newsletter</label>
-      <button id="download-button" data-spinner-size="36" type="submit" class="ladda-button min" data-style="slide-up">Récupérer le livre
-blanc</button>
-    </form>
-    <p class="form-response" id="download-response"></p>
-  </div>
-  <a href="#" id="close" class="close-button">×</a>
-</section>
-
-<section class="pourquoi">
-  <div class="wrapper">
-    <h3>Pourquoi ce livre&nbsp;?</h3>
-    <p>Ce livre est destiné particulièrement aux personnes devant accompagner une équipe
-      de développeurs et souhaitant mieux comprendre le vocabulaire Front-End et les intérêts de chaque framework.</p>
-  </div>
-</section>
 
 <section class="frameworks">
   <div class="wrapper">
@@ -101,6 +71,37 @@ blanc</button>
     {{ sommaire | markdownify }}
   </div>
 
+</section>
+
+<section id="downloadBook">
+  <div class="wrapper">
+    <h1>Téléchargez le livre blanc</h1>
+    <p>Afin de mieux vous connaitre, nous vous demandons de renseigner quelques informations vous concernant avant de télécharer le livre blanc.</p>
+    <form id="getemail"> 
+        <button id="email-button" type="submit" class="ladda-button" >compléter le formulaire</button> 
+    </form>  
+  </div>
+</section>
+
+<section id="download-section" class="download">
+  <a href="" name="download"></a>
+  <div class="wrapper">
+    <form id="download">
+      <p>Pour recevoir le livre blanc, merci de compléter le formulaire ci-dessous</p>
+      <input type="email" class="min" placeholder="Email *" required  id="email" />
+      <input type="text" placeholder="Nom" id="nom" class="min" />
+      <input type="text" placeholder="Prénom" id="prenom" class="min" />
+      <input type="text" placeholder="Société" id="societe" class="min" />
+      <input type="text" placeholder="Fonction" id="fonction" class="min" />
+      <input type="text" placeholder="Téléphone" id="telephone" class="min" />
+      <input type="text" placeholder="Parlez-nous de vos projets et dites-nous si vous souhaitez être contacté" id="champlibre" class="min" />
+      <label><input type="checkbox" id="chk_newsletter">  M'inscrire à la newsletter</label>
+      <button id="download-button" data-spinner-size="36" type="submit" class="ladda-button min" data-style="slide-up">Récupérer le livre
+blanc</button>
+    </form>
+    <p class="form-response" id="download-response"></p>
+  </div>
+  <a href="#" id="close" class="close-button">×</a>
 </section>
 
 <footer>

@@ -104,13 +104,13 @@ $spinnerSize: 32px;
 	position: relative;
   margin: .5em 0;
   background: transparent;
-  border: solid 0px $makinaGreen;
-  color: $black;
+  border: solid 0px $black;
+  color: $makinaGreen;
   text-transform: uppercase;
   padding: 1.25em;
   font-weight: 500;
   transition: all .3s;
-	background: $makinaGreen;
+	background: $black;
   cursor: pointer;
   &:hover {
     color: $grey-light;
@@ -209,7 +209,7 @@ $spinnerSize: 32px;
 	}
 
 	&[data-loading] {
-    background: $green;
+    background: $black;
 		.ladda-label {
 			opacity: 0;
 			top: -1em;
