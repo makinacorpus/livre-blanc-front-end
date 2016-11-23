@@ -124,7 +124,7 @@ function download(e) {
     subscribe(e);
   }
 
-  fetch(API_URL + '/predownload', {
+  fetch(API_URL + '/download', {
     method: 'POST',
     body: data
   })
